@@ -14,16 +14,16 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #0b0e14;
       color: #fff;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 20px;
     }
     .container {
       max-width: 650px;
       width: 100%;
+      text-align: center;
     }
     .badge {
       background: #1e293b;
@@ -52,42 +52,38 @@
     .subhead strong {
       color: #fff;
     }
-    /* Beehiiv embed container — centers and adds spacing */
-    .beehiiv-container {
+    /* Beehiiv form wrapper — centers the form */
+    .beehiiv-wrapper {
       display: flex;
       justify-content: center;
-      margin-top: 8px;
+      width: 100%;
+      margin-bottom: 16px;
     }
-    /* Target the iframe inside the container to ensure it respects dark theme */
-    .beehiiv-container iframe {
+    /* Force iframe to fill container and remove extra padding */
+    .beehiiv-wrapper iframe {
       background: #0b0e14 !important;
       border-radius: 40px;
+      max-width: 100%;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 280px;
+      border: none;
     }
     .note {
-      margin-top: 20px;
       font-size: 14px;
       color: #475569;
+      margin-top: 8px;
     }
     .footer {
       margin-top: 48px;
       color: #334155;
       font-size: 14px;
     }
-    .footer a {
-      color: #64748b;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: #94a3b8;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Badge -->
     <div class="badge">🔥 Launching Soon</div>
-
-    <!-- Headline -->
     <h1>IgniteStack</h1>
     <p class="subhead">
       The ASP.NET Core + React boilerplate<br />
@@ -95,7 +91,7 @@
     </p>
 
     <!-- Beehiiv Embed Form -->
-    <div class="beehiiv-container">
+    <div class="beehiiv-wrapper">
       <script
         async
         src="https://subscribe-forms.beehiiv.com/v3/loader.js"
